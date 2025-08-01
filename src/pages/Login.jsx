@@ -8,15 +8,21 @@ export default function Login() {
   const [form, setForm] = useState({ email: '', senha: '' });
   const [erro, setErro] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await login(form.email, form.senha);
-      navigate('/dashboard');
-    } catch (err) {
-      setErro(err,'E-mail ou senha inválidos.');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    await login(form.email, form.senha);
+    navigate('/dashboard');
+  } catch (err) {
+    console.error('Erro no login:', err);
+
+    if (err.response?.data?.msg) {
+      setErro(err.response.data.msg);
+    } else {
+      setErro('Erro inesperado no login.');
     }
-  };
+  }
+};
 
   return (
     <div className="min-h-screen content-login flex items-center justify-center bg-gray-100 px-4">
