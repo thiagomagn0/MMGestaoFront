@@ -15,9 +15,9 @@ export default function SelectRegiao({ value, onChange, regioes, disabled  }) {
         <label className="block text-sm text-gray-400">Região</label>
       <button style={{ padding: '8px 0px' }}
         onClick={() => !disabled && setOpen(!open)}
-        className={`w-full  text-left   focus:border-[#B72029] outline-none px-4 py-2 text-sm rounded-t bg-white 
+        className={`w-full  text-left   focus:color-red-mm outline-none px-4 py-2 text-sm rounded-t bg-white 
           ${disabled ? 'text-gray-400 cursor-not-allowed' : 'cursor-pointer'}
-          ${open ? 'border-[#B72029]' : 'border-gray-300'}`}
+          ${open ? 'color-red-mm' : 'border-gray-300'}`}
       >
         {selected ? `${selected.nome} (R$ ${selected.taxaEntrega.toFixed(2)})` : 'Selecione uma região'}
       </button>

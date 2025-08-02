@@ -94,14 +94,14 @@ const buscarHistorico = async (clienteId) => {
             onClick={() => setAba('dados')}
             className={`flex-1 py-2 text-center !text-xl  transition-all 
               ${aba === 'dados' 
-              ? 'text-[#B72029] font-bold border-b-2 border-[#B72029]' 
-              : 'text-gray-500 hover:text-[#B72029]/70'}`}>Dados</button>
+              ? 'color-red-mm font-bold border-b-2 color-red-mm' 
+              : 'text-gray-500 hover:color-red-mm/70'}`}>Dados</button>
           <button
             onClick={() => setAba('historico')}
             className={`flex-1 py-2 text-center !text-xl transition-all 
             ${aba === 'historico' 
-            ? 'text-[#B72029] font-bold border-b-2 border-[#B72029]' 
-            : 'text-gray-500 hover:text-[#B72029]/70'}`}>Histórico</button>
+            ? 'color-red-mm font-bold border-b-2 color-red-mm' 
+            : 'text-gray-500 hover:color-red-mm/70'}`}>Histórico</button>
         </div>
 
         {aba === 'dados' && (
@@ -114,7 +114,7 @@ const buscarHistorico = async (clienteId) => {
                 value={form.nome}
                 onChange={e => setForm({ ...form, nome: e.target.value })}
                 disabled={!editando}
-                className="w-full text-lg border-b border-gray-300 focus:border-[#B72029] outline-none py-2 bg-transparent"
+                className="w-full text-lg border-b border-gray-300 focus:color-red-mm outline-none py-2 bg-transparent"
               />
             </div>
 
@@ -126,7 +126,7 @@ const buscarHistorico = async (clienteId) => {
                 value={editando ? form.telefone : maskTelefone(form.telefone)}
                 onChange={e => setForm({ ...form, telefone: maskTelefone(e.target.value) })}
                 disabled={!editando}
-                className="w-full text-lg border-b border-gray-300 focus:border-[#B72029] outline-none py-2 bg-transparent"
+                className="w-full text-lg border-b border-gray-300 focus:color-red-mm outline-none py-2 bg-transparent"
               />
             </div>
 
@@ -138,7 +138,7 @@ const buscarHistorico = async (clienteId) => {
                 value={form.endereco}
                 onChange={e => setForm({ ...form, endereco: e.target.value })}
                 disabled={!editando}
-                className="w-full text-lg border-b border-gray-300 focus:border-[#B72029] outline-none py-2 bg-transparent"
+                className="w-full text-lg border-b border-gray-300 focus:color-red-mm outline-none py-2 bg-transparent"
               />
             </div>
 
@@ -156,11 +156,11 @@ const buscarHistorico = async (clienteId) => {
             <div className="flex justify-end gap-3 pt-4">
               {!editando ? (
                 <button onClick={() => setEditando(true)} 
-                className="bg-[#B72029] hover:bg-[#9f1e25] text-white px-4 py-2 rounded-md transition">Editar</button>
+                className="color-red-mm hover:bg-[#9f1e25] text-white px-4 py-2 rounded-md transition">Editar</button>
               ) : (
                 <>
                   <button onClick={handleSalvar} 
-                  className="bg-[#B72029] hover:bg-[#9f1e25] text-white px-4 py-2 rounded-md transition">Salvar</button>
+                  className="color-red-mm hover:bg-[#9f1e25] text-white px-4 py-2 rounded-md transition">Salvar</button>
                   <button onClick={() => setEditando(false)} 
                   className="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-md transition">Cancelar</button>
                 </>

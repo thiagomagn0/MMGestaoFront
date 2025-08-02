@@ -110,12 +110,12 @@ const clientesFiltrados = clientes.filter(c => c.nome.toLowerCase().includes(bus
 return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded shadow">
       <div className="flex justify-between items-center mb-6 gap-4">
-        <div className="text-2xl font-bold text-[#B72029] flex items-center gap-2">
+        <div className="text-2xl font-bold color-red-mm flex items-center gap-2">
           <BarChart2 /> Relatórios
         </div>
         <button
           onClick={buscarRelatorio}
-          className="bg-[#B72029] hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow"
+          className="color-red-mm hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow"
         >
           Buscar
         </button>
@@ -216,7 +216,7 @@ return (
 
       <div className="overflow-x-auto bg-white rounded shadow">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="bg-[#B72029]/90 text-white">
+          <thead className="color-red-mm/90 text-white">
             <tr>
               <th className="text-left px-4 py-2">Data</th>
               <th className="text-left px-4 py-2">Cliente</th>
@@ -240,7 +240,7 @@ return (
             ))}
           </tbody>
           {relatorio.length > 0 && (
-            <tfoot className="bg-[#B72029]/10 text-[#B72029] font-bold">
+            <tfoot className="color-red-mm/10 color-red-mm font-bold">
               <tr>
                 <td className="px-4 py-2" colSpan={3}>Totais</td>
                 <td className="text-right px-4 py-2">{totais.quantidade}</td>
@@ -254,7 +254,7 @@ return (
 
            <button
             onClick={exportarPDF}
-            className="bg-[#B72029] flex items-center gap-2 hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow"
+            className="color-red-mm flex items-center gap-2 hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow"
           >
             <FileDown size={18} /> 
             <span>Exportar PDF</span>

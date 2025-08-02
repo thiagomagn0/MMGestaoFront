@@ -104,7 +104,7 @@ const dropdownRef = useRef(null);
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold text-[#B72029] mb-4">Cliente: {cliente.nome}</h2>
+      <h2 className="text-2xl font-bold color-red-mm mb-4">Cliente: {cliente.nome}</h2>
     
       <div className="mb-6">
         <label className="block font-semibold text-gray-700 mb-1">Data do Pedido</label>
@@ -183,12 +183,12 @@ const dropdownRef = useRef(null);
                 />
                 <span className="text-sm">R$ {(p.quantidade * p.preco).toFixed(2)}</span>
                 <button onClick={() => removerProduto(index)} className="">
-                  <Trash2 className="text-[#B72029]" />
+                  <Trash2 className="color-red-mm" />
                 </button>
               </div>
             ))}
           </div>
-          <div className="mt-4 text-right text-lg font-bold text-[#B72029]">
+          <div className="mt-4 text-right text-lg font-bold color-red-mm">
             Total: R$ {calcularTotal()}
           </div>
         </div>
@@ -204,7 +204,7 @@ const dropdownRef = useRef(null);
         <button
           onClick={handleSalvar}
           disabled={selecionados.length === 0}
-          className="bg-[#B72029] text-white px-4 py-2 rounded hover:bg-[#a31d24] disabled:opacity-50"
+          className="color-red-mm text-white px-4 py-2 rounded hover:bg-[#a31d24] disabled:opacity-50"
         >
           Salvar Pedido
         </button>

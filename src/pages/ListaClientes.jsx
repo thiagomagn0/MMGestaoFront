@@ -103,7 +103,7 @@ const buscarClientes = async () => {
 
         <button
           onClick={() => navigate('/clientes/novo')}
-          className="bg-[#B72029] hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow inset-shadow-sm inset-shadow-gray-300"
+          className="color-red-mm hover:bg-[#a31d24] text-white px-4 py-2 rounded shadow inset-shadow-sm inset-shadow-gray-300"
           
         >
           <UserPlus className="inline" />          
