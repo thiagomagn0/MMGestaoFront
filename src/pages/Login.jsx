@@ -30,7 +30,7 @@ const handleSubmit = async (e) => {
         
         {/* LOGO */}
         <img
-          src="./public/logo.png" // substitua pelo caminho da sua imagem
+          src="/logo.png" // substitua pelo caminho da sua imagem
           alt="Logo"
           className="w-24 h-24 mx-auto mb-4"
         />
