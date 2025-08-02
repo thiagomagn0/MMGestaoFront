@@ -48,7 +48,7 @@ export default function ListaPedidos() {
           <div key={pedido._id} className="bg-gray-50 rounded-lg shadow-sm p-4">
             <div className="flex justify-between items-center">
               <div>
-                <div className="font-semibold text-lg color-red-mm">
+                <div className="font-semibold text-lg color-red-mm-txt">
                   {pedido.cliente?.nome || 'Cliente removido'}
                 </div>
                 <div className="text-gray-500 text-sm">
@@ -65,7 +65,7 @@ export default function ListaPedidos() {
                 </ul> */}
                 <button
                     onClick={() => excluirPedido(pedido._id)}
-                    className="color-red-mm hover:underline text-sm"
+                    className="color-red-mm-txt hover:underline text-sm"
                     >
                     <Trash2 className="inline" />
                 </button>

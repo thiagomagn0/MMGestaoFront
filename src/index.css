@@ -81,6 +81,9 @@ header {
 .color-red-mm {
   background: #B72029;
 }
+.color-red-mm-txt {
+  color: #B72029;
+}
 .modal-cliente {
     height: 634px;
     

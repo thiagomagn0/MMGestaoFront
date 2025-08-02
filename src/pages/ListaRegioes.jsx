@@ -120,7 +120,7 @@ export default function ListaRegioes() {
               <MapPin className="w-5 h-5" />
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg color-red-mm">{regiao.nome}</h3>
+              <h3 className="font-semibold text-lg color-red-mm-txt">{regiao.nome}</h3>
               <p className="text-gray-500 text-sm">Taxa: R$ {regiao.taxaEntrega?.toFixed(2) || '0,00'}</p>
             </div>
                <div className="relative">
@@ -145,7 +145,7 @@ export default function ListaRegioes() {
         <div className="fixed inset-0 z-50 backdrop-blur  bg-opacity-50 flex justify-center items-end md:items-center transition-opacity duration-300">
           <div className={`bg-white rounded-t-lg md:rounded-lg shadow-lg p-6 w-full max-w-md transform transition-all duration-300 ${show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold color-red-mm">Nova Região</h3>
+              <h3 className="text-xl font-bold color-red-mm-txt">Nova Região</h3>
               <button onClick={() => { setShow(false); setTimeout(() => setModalAberto(false), 300); }} className="text-gray-400 hover:text-black">
                 <X size={24} />
               </button>
@@ -153,20 +153,20 @@ export default function ListaRegioes() {
 
             <div className="space-y-4">
               <div>
-                <label className="block text-sm font-medium color-red-mm mb-1">Nome</label>
+                <label className="block text-sm font-medium color-red-mm-txt mb-1">Nome</label>
                 <input
                   type="text"
-                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm p-2 bg-transparent"
+                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm-txt p-2 bg-transparent"
                   value={novaRegiao.nome}
                   onChange={e => setNovaRegiao({ ...novaRegiao, nome: e.target.value })}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium color-red-mm mb-1">Taxa de Entrega (R$)</label>
+                <label className="block text-sm font-medium color-red-mm-txt mb-1">Taxa de Entrega (R$)</label>
                 <input
                   type="number"
-                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm p-2 bg-transparent"
+                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm-txt p-2 bg-transparent"
                   value={novaRegiao.taxaEntrega}
                   onChange={e => setNovaRegiao({ ...novaRegiao, taxaEntrega: e.target.value })}
                 />

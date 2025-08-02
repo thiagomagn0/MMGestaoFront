@@ -147,14 +147,14 @@ const handleSave = async (e) => {
           <div className={`bg-white rounded-t-lg md:rounded-lg shadow-lg p-6 w-full max-w-md transform transition-all duration-300
             ${show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold color-red-mm">{editandoId ? 'Editar Produto' : 'Novo Produto'}</h3>
+              <h3 className="text-xl font-bold color-red-mm-txt">{editandoId ? 'Editar Produto' : 'Novo Produto'}</h3>
               <button onClick={handleCancel} className="text-gray-400 hover:text-black">
                  <ArrowDown size={36} />
               </button>
             </div>
             <form onSubmit={handleSave} className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium color-red-mm mb-1">Imagem (máx 1MB)</label>
+                  <label className="block text-sm font-medium color-red-mm-txt mb-1">Imagem (máx 1MB)</label>
                   <input
                     type="file"
                     accept="image/*"
@@ -166,35 +166,35 @@ const handleSave = async (e) => {
                   )}
               </div>
               <div>
-                <label className="block text-sm font-medium color-red-mm mb-1">Nome</label>
+                <label className="block text-sm font-medium color-red-mm-txt mb-1">Nome</label>
                 <input
                   type="text"
                   placeholder="Nome"
                   
                   value={formData.nome}
                   onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm p-2 bg-transparent"
+                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm-txt p-2 bg-transparent"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium color-red-mm mb-1">Descrição</label>
+                <label className="block text-sm font-medium color-red-mm-txt mb-1">Descrição</label>
                 <input
                   type="text"
                   placeholder="Descrição"
                   value={formData.descricao}
                   onChange={(e) => setFormData({ ...formData, descricao: e.target.value })}
-                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm p-2 bg-transparent"
+                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm-txt p-2 bg-transparent"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium color-red-mm mb-1">Preço</label>
+                <label className="block text-sm font-medium color-red-mm-txt mb-1">Preço</label>
                 <input
                   type="number"
                   placeholder="Preço"
                   value={formData.preco}
                   onChange={(e) => setFormData({ ...formData, preco: e.target.value })}
-                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm p-2 bg-transparent"
+                  className="w-full border-b border-gray-300 focus:outline-none focus:color-red-mm-txt p-2 bg-transparent"
                   required
                   step="0.01"
                   min="0"
@@ -232,7 +232,7 @@ const handleSave = async (e) => {
                 )}
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-lg color-red-mm">{produto.nome}</h3>
+              <h3 className="font-semibold text-lg color-red-mm-txt">{produto.nome}</h3>
               <p className="text-gray-500 text-sm">R$ {produto.preco.toFixed(2)}</p>
             </div>
             <div className="relative">

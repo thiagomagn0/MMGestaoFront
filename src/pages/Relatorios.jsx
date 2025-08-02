@@ -110,7 +110,7 @@ const clientesFiltrados = clientes.filter(c => c.nome.toLowerCase().includes(bus
 return (
     <div className="max-w-6xl mx-auto p-6 bg-white rounded shadow">
       <div className="flex justify-between items-center mb-6 gap-4">
-        <div className="text-2xl font-bold color-red-mm flex items-center gap-2">
+        <div className="text-2xl font-bold color-red-mm-txt flex items-center gap-2">
           <BarChart2 /> Relatórios
         </div>
         <button
@@ -216,7 +216,7 @@ return (
 
       <div className="overflow-x-auto bg-white rounded shadow">
         <table className="min-w-full divide-y divide-gray-200">
-          <thead className="color-red-mm/90 text-white">
+          <thead className="color-red-mm-txt text-white">
             <tr>
               <th className="text-left px-4 py-2">Data</th>
               <th className="text-left px-4 py-2">Cliente</th>
@@ -240,7 +240,7 @@ return (
             ))}
           </tbody>
           {relatorio.length > 0 && (
-            <tfoot className="color-red-mm/10 color-red-mm font-bold">
+            <tfoot className=" color-red-mm-txt font-bold">
               <tr>
                 <td className="px-4 py-2" colSpan={3}>Totais</td>
                 <td className="text-right px-4 py-2">{totais.quantidade}</td>
