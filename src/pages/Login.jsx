@@ -70,12 +70,12 @@ const handleSubmit = async (e) => {
           </button>
         </form>
 
-        <p className="mt-6 text-sm text-gray-600">
+        {/* <p className="mt-6 text-sm text-gray-600">
           Ainda não tem conta?{' '}
           <Link to="/register" className="text-blue-600 hover:underline">
             Criar conta
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );
