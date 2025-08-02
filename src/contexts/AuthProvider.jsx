@@ -5,11 +5,16 @@ import api from '../services/api';
   export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem('token') || null);
 
-  const login = async (email, senha) => {
+const login = async (email, senha) => {
+  try {
     const res = await api.post('/auth/login', { email, senha });
     localStorage.setItem('token', res.data.token);
     setToken(res.data.token);
-  };
+  } catch (err) {
+    console.error('Erro no login:', err);
+    throw err; // deixa o componente de login lidar com a exibição do erro
+  }
+};
 
   const logout = () => {
     localStorage.removeItem('token');
